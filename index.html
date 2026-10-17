@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hey Beautiful ❤️</title>
+<style>
+*{box-sizing:border-box} body{margin:0;min-height:100vh;display:grid;place-items:center;overflow:hidden;font-family:Georgia,'Times New Roman',serif;color:#7b2345;background:radial-gradient(circle at 20% 15%,#fff7fb 0,#ffe3ef 35%,#ffc4dc 100%)}
+.heart{position:fixed;color:#ff6fa9;opacity:.3;animation:float 8s linear infinite;pointer-events:none;font-size:22px}
+@keyframes float{0%{transform:translateY(110vh) rotate(0)}100%{transform:translateY(-15vh) rotate(360deg)}}
+.card{position:relative;width:min(90vw,440px);padding:36px 26px;text-align:center;background:#ffffffc9;border:1px solid #fff;box-shadow:0 20px 70px #b94b7850;border-radius:28px;backdrop-filter:blur(8px)}
+.emoji{font-size:42px;animation:pulse 1.8s infinite}@keyframes pulse{50%{transform:scale(1.13)}}
+h1{font-size:clamp(34px,8vw,48px);margin:12px 0;color:#b52e61} p{font-size:17px;line-height:1.6}
+button{border:0;border-radius:999px;padding:14px 22px;margin-top:12px;background:#e84f8a;color:white;font-size:16px;box-shadow:0 8px 20px #e84f8a55;cursor:pointer}
+button:active{transform:scale(.98)} .note{display:none;margin-top:22px;padding:18px;border-radius:18px;background:#fff0f6;line-height:1.7;animation:fade .6s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}} .tiny{font-size:12px;opacity:.65;margin-top:20px}
+</style>
+</head>
+<body>
+<script>
+for(let i=0;i<18;i++){let h=document.createElement('div');h.className='heart';h.textContent=['♥','♡','✦'][i%3];h.style.left=(i*5.7)+'%';h.style.animationDelay=(-i*.7)+'s';h.style.animationDuration=(7+i%5)+'s';document.body.appendChild(h)}
+</script>
+<main class="card">
+  <div class="emoji">💗</div>
+  <h1>Hey Beautiful.❤️</h1>
+  <p>A little something to make you smile...</p>
+  <button id="open">Open My Heart 💌</button>
+  <div class="note" id="note">
+    <strong>A Little Note for You</strong><br><br>
+    Just a little reminder that you make the world feel a bit brighter. Keep smiling, keep shining, and never forget how special you are. ❤️
+    <br><div style="font-size:25px;margin-top:12px">💖 💗 💞</div>
+  </div>
+  <div class="tiny">made with a little love ♡</div>
+</main>
+<script>
+document.getElementById('open').addEventListener('click',()=>{document.getElementById('note').style.display='block';document.getElementById('open').textContent='My Heart Is Open ❤️'});
+</script>
+</body></html>
